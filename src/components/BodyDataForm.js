@@ -34,11 +34,11 @@ const BodyDataForm = () => {
   });
 
   return (
-    <div className="container-md mt-4">
-      <div className="row justify-content-center">
-        <div className="col-9 col-lg-3">
-          <form onSubmit={formik.handleSubmit} className="container">
-            <div className="form-floating mb-3">
+    <div className="container-fluid mt-5 text-dark">
+      <form onSubmit={formik.handleSubmit} className="container-md">
+        <div className="row g-lg-5">
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating">
               <div class="form-control form-control-sm" id="floatingInput">
                 <DatePicker
                   selected={formik.values.Date}
@@ -52,9 +52,11 @@ const BodyDataForm = () => {
               <label for="floatingInput Date">Date </label>
             </div>
             {formik.touched.Date && formik.errors.Date ? (
-              <div>{formik.errors.Date}</div>
+              <div className="text-danger">{formik.errors.Date}</div>
             ) : null}
-            <div className="form-floating mb-3">
+          </div>
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Weight"
@@ -69,10 +71,11 @@ const BodyDataForm = () => {
             </div>
 
             {formik.touched.Weight && formik.errors.Weight ? (
-              <div>{formik.errors.Weight}</div>
+              <div className="text-danger">{formik.errors.Weight}</div>
             ) : null}
-
-            <div className="form-floating mb-3 col">
+          </div>
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating col">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Bicep"
@@ -87,10 +90,11 @@ const BodyDataForm = () => {
             </div>
 
             {formik.touched.Bicep && formik.errors.Bicep ? (
-              <div>{formik.errors.Bicep}</div>
+              <div className="text-danger">{formik.errors.Bicep}</div>
             ) : null}
-
-            <div className="form-floating mb-3">
+          </div>
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Waist"
@@ -104,10 +108,13 @@ const BodyDataForm = () => {
               <label for="floatingInput Waist">Waist (in Inches)</label>
             </div>
             {formik.touched.Waist && formik.errors.Waist ? (
-              <div>{formik.errors.Waist}</div>
+              <div className="text-danger">{formik.errors.Waist}</div>
             ) : null}
-
-            <div className="form-floating mb-3">
+          </div>
+        </div>
+        <div className="row gx-lg-5 mt-lg-3 mb-3 mb-lg-0">
+          <div className="col-12 col-lg-3">
+            <div className="form-floating">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Chest"
@@ -121,9 +128,11 @@ const BodyDataForm = () => {
               <label for="floatingInput Chest">Chest (in Inches)</label>
             </div>
             {formik.touched.Chest && formik.errors.Chest ? (
-              <div>{formik.errors.Chest}</div>
+              <div className="text-danger">{formik.errors.Chest}</div>
             ) : null}
-            <div className="form-floating mb-3">
+          </div>
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Glutes"
@@ -137,10 +146,11 @@ const BodyDataForm = () => {
               <label for="floatingInput Glutes">Glutes (in Inches)</label>
             </div>
             {formik.touched.Glutes && formik.errors.Glutes ? (
-              <div>{formik.errors.Glutes}</div>
+              <div className="text-danger">{formik.errors.Glutes}</div>
             ) : null}
-
-            <div className="form-floating mb-3">
+          </div>
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Quads"
@@ -154,10 +164,11 @@ const BodyDataForm = () => {
               <label for="floatingInput Quads">Quads (in Inches)</label>
             </div>
             {formik.touched.Quads && formik.errors.Quads ? (
-              <div>{formik.errors.Quads}</div>
+              <div className="text-danger">{formik.errors.Quads}</div>
             ) : null}
-
-            <div className="form-floating mb-3">
+          </div>
+          <div className="col-12 col-lg-3 mb-3 mb-lg-0">
+            <div className="form-floating">
               <input
                 class="form-control form-control-sm"
                 id="floatingInput Calves"
@@ -171,12 +182,22 @@ const BodyDataForm = () => {
               <label for="floatingInput Calves">Calves (in Inches)</label>
             </div>
             {formik.touched.Calves && formik.errors.Calves ? (
-              <div>{formik.errors.Calves}</div>
+              <div className="text-danger">{formik.errors.Calves}</div>
             ) : null}
-            <button type="submit" class="btn btn-dark col-12 mb-3" Style="background-color: #041C32;">Submit</button>
-          </form>
+          </div>
         </div>
-      </div>
+        <div className="row justify-content-center mt-4">
+          <div className="col-5 col-lg-3">
+            <button
+              type="submit"
+              class="btn btn-dark col-12 mb-3"
+              Style="background-color: #041C32;"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
-import BodyDataForm from "./BodyDataForm";
+import FormPage from "./FormPage";
 import TrackFitness from "./TrackFitness";
 function RoutesPage() {
   return (
@@ -70,7 +70,7 @@ function RoutesPage() {
       </nav>
       <Routes>
         <Route path="/track-fitness" element={<TrackFitness />}></Route>
-        <Route path="/data-form" element={<BodyDataForm />}></Route>
+        <Route path="/data-form" element={<FormPage />}></Route>
         <Route path="/" element={<Navigate replace to="/track-fitness" />}></Route>
       </Routes>
     </Router>
