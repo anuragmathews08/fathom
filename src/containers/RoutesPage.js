@@ -11,15 +11,15 @@ function RoutesPage() {
   return (
     <Router>
       <nav
-        class="navbar navbar-expand-lg navbar-dark px-md-5"
+        className="navbar navbar-expand-lg navbar-dark px-md-5"
         Style="background-color: #041C32;"
       >
-        <div class="container-fluid">
+        <div className="container-fluid">
           <NavLink className={() => "navbar-brand fs-2 fw-bolder "} to="/track-fitness">
             Fathom
           </NavLink>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -27,14 +27,14 @@ function RoutesPage() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0"
+            className="collapse navbar-collapse justify-content-end mt-3 mt-lg-0"
             id="navbarNav"
           >
-            <ul class="navbar-nav mb-2 mb-lg-0 nav-pills">
-              <li class="nav-item mx-3 text-center">
+            <ul className="navbar-nav mb-2 mb-lg-0 nav-pills">
+              <li className="nav-item mx-3 text-center">
                 <NavLink
                   to="/track-fitness"
                   className={(navData) =>
@@ -44,7 +44,7 @@ function RoutesPage() {
                   Track Fitness
                 </NavLink>
               </li>
-              <li class="nav-item mx-3 text-center">
+              <li className="nav-item mx-3 text-center">
                 <NavLink
                   to="/data-form"
                   className={(navData) =>
@@ -54,7 +54,7 @@ function RoutesPage() {
                   Data Form
                 </NavLink>
               </li>
-              <li class="nav-item mx-3 text-center">
+              <li className="nav-item mx-3 text-center">
               <NavLink
                   to="/logout"
                   className={(navData) =>
